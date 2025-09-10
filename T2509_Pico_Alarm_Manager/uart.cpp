@@ -385,13 +385,13 @@ void uart_gw_task(void)
             uart.rx.msg.str = SerialGw.readStringUntil('\n');
             if (uart.rx.msg.str.length()> 0)
             {
-                Serial.print("uart,rx.msg.str= "); Serial.println(uart.rx.msg.str);
+                //Serial.print("uart,rx.msg.str= "); Serial.println(uart.rx.msg.str);
                 uart.rx.msg.avail = true;
                 if(uart_build_node_from_rx_str()) {
                     uart_print_node();
                     pir_update(&uart.node);
                 }
-                else Serial.println("Not a valid mesage");
+                //else Serial.println("Not a valid mesage");
                
             }
             uart.tx.timeout = millis() + 2000;

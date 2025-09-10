@@ -20,8 +20,7 @@ typedef struct
     uint16_t    state;
     uint16_t    prev_state;
     uint8_t     status;
-    uint8_t     new_active;
-    uint8_t     prev_active;
+    uint8_t     event;
     uint32_t    timeout;
 } pir_st;
 
